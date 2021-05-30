@@ -2,12 +2,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academy kitties </title>
+  <title>kitties </title>
   <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <script src="assets/bootstrap/js/popper.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
+  <link rel="stylesheet" href="assets/css/animation.css">
   <link rel="stylesheet" href="assets/css/mystyle.css">
   <link rel="stylesheet" href="assets/css/cats.css">
   <link rel="stylesheet" href="assets/css/colors.css">
@@ -32,11 +33,12 @@
                         </div>
                     </div>
 
-                    <div id="head" class="cat__head">
-                        <div id="midDot" class="cat__head-dots">
+                    <div id="head" class="cat__head movingHead">
+                        <!-- <div id="dots" class="cat__head-dots"> -->
+                            <div id="midDot" class="cat__head-dots_mid"></div>
                             <div id="leftDot" class="cat__head-dots_first"></div>
                             <div id="rightDot" class="cat__head-dots_second"></div>
-                        </div>
+                        <!-- </div> -->
                         <div class="cat__eye">
                             <div class="cat__eye--left">
                                 <span class="pupil-left"></span>
@@ -85,9 +87,10 @@
                         
                          <!-- Cattributes -->
                          <span id="dnashape"></span>
-                         <span id="dnadecoration"></span>
+                         <span id="dnadotsstyle"></span>
+                         <!-- <span id="dnadecoration"></span>
                          <span id="dnadecorationMid"></span>
-                         <span id="dnadecorationSides"></span>
+                         <span id="dnadecorationSides"></span> -->
                          <span id="dnadanimation"></span>
                          <span id="dnaspecial"></span>
                     </b>
@@ -95,13 +98,33 @@
             </div>
             <div class="col-lg-7 cattributes m-2 light-b-shadow">
 
-<!-- Cat colors -->
-<div id="catColors">
-                <div class="form-group">
-                    <label for="formControlRange"><b>Head and body</b><span class="badge badge-dark ml-2" id="headcode"></span></label>
-                    <input type="range" min="10" max="98" class="form-control-range" id="bodycolor">
-                </div>
-            </div>
+                <!-- Cat colors -->
+                <div id="catColors">    
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Head and body</b><span class="badge badge-dark ml-2" id="headcode"></span></label>
+                        <input type="range" min="10" max="98" class="form-control-range" id="bodycolor">
+                    </div>
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Ears and Paws and tail</b><span class="badge badge-dark ml-2" id="earcode"></span></label>
+                        <input type="range" min="00" max="98" class="form-control-range" id="earcolor">
+                    </div>
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Eyes</b><span class="badge badge-dark ml-2" id="eyecode"></span></label>
+                        <input type="range" min="00" max="98" class="form-control-range" id="eyecolor">
+                    </div>
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Mouth, Belly and Inner Ears</b><span class="badge badge-dark ml-2" id="mouthcode"></span></label>
+                        <input type="range" min="00" max="98" class="form-control-range" id="mouthcolor">
+                    </div>
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Eye Shape</b><span class="badge badge-dark ml-2" id="eyename"></span></label>
+                        <input type="range" min="1" max="6" class="form-control-range" id="eyeshape">
+                    </div>
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Hair style</b><span class="badge badge-dark ml-2" id="dotsname"></span></label>
+                        <input type="range" min="1" max="5" class="form-control-range" id="dotspattern">
+                    </div>
+                 </div>
 
             </div>
 
@@ -114,7 +137,7 @@
 
     </div>
     <footer align="left">
-        <p>Ivan on Tech Academy Bootcamp July 2020</p>
+        <p>Crypto Kitties Clone</p>
     </footer>
 
   </body>

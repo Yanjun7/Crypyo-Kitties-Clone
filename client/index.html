@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col-lg-4 catBox m-2 light-b-shadow">
                 <div class="cat">
-                    <div class="cat__ear">
+                    <div id="ears" class="cat__ear">
                         <div id="leftEar" class="cat__ear--left">
                             <div class="cat__ear--left-inside"></div>
                         </div>
@@ -33,7 +33,7 @@
                         </div>
                     </div>
 
-                    <div id="head" class="cat__head movingHead">
+                    <div id="head" class="cat__head">
                         <!-- <div id="dots" class="cat__head-dots"> -->
                             <div id="midDot" class="cat__head-dots_mid"></div>
                             <div id="leftDot" class="cat__head-dots_first"></div>
@@ -123,6 +123,10 @@
                     <div class="form-group">
                         <label for="formControlRange"><b>Hair style</b><span class="badge badge-dark ml-2" id="dotsname"></span></label>
                         <input type="range" min="1" max="5" class="form-control-range" id="dotspattern">
+                    </div>
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Animations</b><span class="badge badge-dark ml-2" id="animationname"></span></label>
+                        <input type="range" min="1" max="6" class="form-control-range" id="animationstyle">
                     </div>
                  </div>
 

@@ -95,7 +95,7 @@ function dotsStyle(num){
             break
         case 4:
             normalDots()
-            $('#dotsname').html('Nerd')
+            $('#dotsname').html('Bald')
             bald()
             break
         case 5:
@@ -105,6 +105,80 @@ function dotsStyle(num){
             break
     }
 }
+function animationStyle(num){
+    $('#dnaanimation').html(num)
+    switch (num) {
+        case 1:
+            $('#animationname').html("Moving Head")
+            clearAnimation();
+            movingHead()
+            break;
+        case 2:
+            $('#animationname').html("Scaling Head")
+            clearAnimation();
+            scaleHead()
+            break;
+        case 3:
+            $('#animationname').html("Noding Head")
+            clearAnimation();
+            nodHead()
+            break;
+        case 4:
+            $('#animationname').html("Moving Tail")
+            clearAnimation();
+            moveTail()
+            break;
+        case 5:
+            $('#animationname').html("Winking Eyes")
+            clearAnimation();
+            wink()
+            break;
+        case 6:
+            $('#animationname').html("Moving Ears")
+            clearAnimation();
+            moveEars()
+            break;
+    }
+}
+function movingHead(){
+    $("#head").addClass("movingHead")
+    $("#ears").addClass("movingHead")
+}
+function scaleHead(){
+    $("#head").addClass("scalingHead")
+    $("#ears").addClass("scalingHead")
+}
+function nodHead(){
+    $("#head").addClass("noddingHead")
+    $("#ears").addClass("noddingHead")
+}
+function moveTail(){
+    $("#tail").addClass("movingTail")
+}
+function wink(){
+    $(".cat__eye--left").addClass("winking")
+    $(".cat__eye--right").addClass("winking")
+}
+function moveEars(){
+    $(".cat__ear--left").addClass("movingLeftEar")
+    $(".cat__ear--right").addClass("movingRightEar")
+}
+
+function clearAnimation(){
+    $("#head").removeClass("movingHead")
+    $("#head").removeClass("noddingHead")
+    $("#head").removeClass("scalingHead")
+    $("#ears").removeClass("movingHead")
+    $("#ears").removeClass("noddingHead")
+    $("#ears").removeClass("scalingHead")
+    $(".cat__ear--left").removeClass("movingLeftEar")
+    $(".cat__ear--right").removeClass("movingRightEar")
+    $(".cat__eye--left").removeClass("winking")
+    $(".cat__eye--right").removeClass("winking")
+    $("#tail").removeClass("movingTail")
+}
+
+
 async function normalEyes() {
     $('.cat__eye').find('span').css({"position": "absolute",
         "top": "30px",

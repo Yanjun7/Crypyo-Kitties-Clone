@@ -9,8 +9,8 @@ var defaultDNA = {
     //Cattributes
     "eyesShape" : 1,
     "decorationPattern" : 1,
-    "decorationMidcolor" : 13,
-    "decorationSidescolor" : 13,
+    // "decorationMidcolor" : 13,
+    // "decorationSidescolor" : 13,
     "animation" :  1,
     "lastNum" :  1
     }
@@ -26,8 +26,8 @@ $( document ).ready(function() {
   $('#dnadotsstyle').html(defaultDNA.decorationPattern)
 
   //$('#dnadecoration').html(defaultDNA.decorationPattern)
-  $('#dnadecorationMid').html(defaultDNA.decorationMidcolor)
-  $('#dnadecorationSides').html(defaultDNA.decorationSidescolor)
+  // $('#dnadecorationMid').html(defaultDNA.decorationMidcolor)
+  // $('#dnadecorationSides').html(defaultDNA.decorationSidescolor)
   $('#dnaanimation').html(defaultDNA.animation)
   $('#dnaspecial').html(defaultDNA.lastNum)
 
@@ -41,11 +41,13 @@ function getDna(){
     dna += $('#dnaeyes').html()
     dna += $('#dnaears').html()
     dna += $('#dnashape').html()
-    dna += $('#dnadecoration').html()
-    dna += $('#dnadecorationMid').html()
-    dna += $('#dnadecorationSides').html()
+    dna += $('#dnadotsstyle').html()
     dna += $('#dnaanimation').html()
     dna += $('#dnaspecial').html()
+    // dna += $('#dnadecoration').html()
+    // dna += $('#dnadecorationMid').html()
+    // dna += $('#dnadecorationSides').html()
+    
 
     return parseInt(dna)
 }
@@ -53,6 +55,8 @@ function getDna(){
 function renderCat(dna){
     headColor(colors[dna.headcolor],dna.headcolor)
     $('#bodycolor').val(dna.headcolor)
+    animationStyle(dna.animation)
+    $("#animationstyle").val(dna.animation)
 }
 
 // Changing cat colors
@@ -83,4 +87,9 @@ $('#eyeshape').change(()=>{  //listener
 $('#dotspattern').change(()=>{  //listener
   var dots = parseInt($('#dotspattern').val())
   dotsStyle(dots)
+})
+
+$('#animationstyle').change(()=>{
+  var animations = parseInt($('#animationstyle').val())
+  animationStyle(animations)
 })
